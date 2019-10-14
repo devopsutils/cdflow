@@ -10,6 +10,7 @@ This is a file containing variables passed to `terraform`, when `cdflow deploy` 
 ## Example
 
 `./config/common.json`:
+
 ```json
     {
         "cpu": 16,
@@ -21,6 +22,7 @@ This is a file containing variables passed to `terraform`, when `cdflow deploy` 
 ```
 
 `./infra/variables.tf`:
+
 ```hcl
 variable "cpu" {
   type        = "string"

@@ -7,7 +7,6 @@ weight: 10
 
 These are the list of properties you can have in the account scheme json file. This file should be stored in an S3 bucket under a key which is accessible to the IAM user running the `cdflow` tools.
 
-
 | Key | Default | Required | Description | Example |
 | --- | ------- | -------- | ----------- | ------- |
 |`accounts` | - | yes | A json object representing an AWS account and the role to assume whilst making changes i.e. deploying | `"account_alias":{ "id": "1234567890", "role": "admin" }` |
@@ -16,8 +15,9 @@ These are the list of properties you can have in the account scheme json file. T
 |`environments`| - | yes | Which accounts map to which environment when you run a deploy | `"*": "account_alias"` |
 |`default-region`| - | yes | If region isn't in the environment, which AWS region resources should be deployed to | `"eu-west-1"` | 
 
-Quick Example:
-```
+## Example
+
+```json
 {
   "accounts": {
     "dev": {

@@ -10,6 +10,7 @@ This is a file containing variables passed to `terraform`, when `cdflow deploy` 
 ## Example
 
 `./config/live.json`:
+
 ```json
     {
         "static_assets_url": "https://cdn.example.com/",
@@ -20,6 +21,7 @@ This is a file containing variables passed to `terraform`, when `cdflow deploy` 
 ```
 
 `./infra/variables.tf`:
+
 ```hcl
 variable "static_assets_url" {
   type        = "string"

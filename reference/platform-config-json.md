@@ -9,7 +9,7 @@ This is a directory, passed to the `cdflow release` command with the `--platform
 
 The directory should contain a structure as follows, with a folder for each account alias and JSON files within those which are named after the AWS regions in which you are operating and contain the details of resources within those regions:
 
-```bash
+```shell
 [user@localhost org-platform-config]$ tree
 .
 ├── orgdev
