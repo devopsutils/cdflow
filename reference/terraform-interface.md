@@ -77,8 +77,11 @@ Any flags passed as `--release-data=key=value` will appear in the release map li
 
 ### Config files
 
-The JSON files under `./config/*.json` in the root of your project are passed to the `terraform` executable as [`-var-file` flags](https://www.terraform.io/docs/configuration-0-11/variables.html#variable-files), so any top-level keys in those files need to be defined as `variable` blocks to be able to able to access them in code.
+The JSON files under `./config/*.json` in the root of your project are passed to the `terraform` executable as [`-var-file` flags](https://www.terraform.io/docs/configuration-0-11/variables.html#variable-files), so any top-level keys in those files need to be defined as `variable` blocks in your `./infra/*.tf` files to be able to able to access them in the code. There can be two files passed:
+
+- [`common.json`]({{ site.baseurl }}{% link reference/config-common-json.md %})
+- [`<env>.json`]({{ site.baseurl }}{% link reference/config-env-json.md %})
 
 ### Platform config
 
-The `platform_config` variable is a special case for the `-var-file` flag and CDFlow expects there to be a top-level `platform_config` key in that JSON file.
+The `platform_config` variable is a special case for the `-var-file` flag and CDFlow expects there to be a top-level `platform_config` key in the JSON file that `cdflow` selects from the platform config directory. See the reference on [platform config]({{ site.baseurl }}{% link reference/platform-config-json.md %}) for more information.
