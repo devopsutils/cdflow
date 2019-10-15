@@ -3,7 +3,7 @@ menu: docs
 weight: 10
 ---
 
-# Getting Started
+# Getting started
 
 Here you will find all of the steps to get started using CDFLow in your project.
 
@@ -28,6 +28,16 @@ localhost:project-name# tree
     ├── main.tf
     └── variables.tf
 ```
+
+Some of the component types, specified in the `cdflow.yml` file, require other files and directories.
+
+### Docker component type
+
+The `docker` component type requires a [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) in the root of the project so that it can build a container image from it.
+
+### Lambda component type
+
+The `lambda` component type requires a folder containing the source code for the AWS Lambda function. This can either be named with the same name as the component i.e. if the Git remote is `git@github.com:organisation/project-name.git` then there should be a folder named `./project-name` at the root of the project, or if that doesn't exist then `cdflow` will look for a directory called `./src` and treat that as the code for the Lambda function.
 
 ## Runtime requirements
 
