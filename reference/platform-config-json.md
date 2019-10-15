@@ -3,7 +3,7 @@ menu: reference
 weight: 20
 ---
 
-# Platform Config Folder
+# Platform config folder
 
 This is a directory, passed to the `cdflow release` command with the `--platform-config` flag. It is bundled with the release and contains information about common resources such as VPCs and subnets.
 

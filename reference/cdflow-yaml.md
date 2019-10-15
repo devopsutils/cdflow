@@ -1,10 +1,9 @@
 ---
-title: cdflow.yml
 menu: reference
 weight: 30
 ---
 
-# cdflow.yml Reference
+# cdflow.yml
 
 These are the list of properties you can have in the cdflow manifest file. This file should be named `cdflow.yml` in your project.
 
